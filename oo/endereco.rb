@@ -1,14 +1,16 @@
 class Endereco
   attr_reader :ceep, :bairro, :cidade
 
-  def initialize(ceep, bairro, cidade)
-    @ceep = ceep
+  def initialize(cep, bairro, cidade, pessoa, cliente)
+    @ceep = cep
     @bairro = bairro
     @cidade = cidade
+    @pessoa = pessoa
+    @cliente = cliente
   end
 
   def exibir_endereco
-    puts "ceep: #{@ceep}"
+    puts "cep: #{@ceep}"
     puts "bairro: #{@bairro}"
     puts "cidade; #{@cidade}"
   end

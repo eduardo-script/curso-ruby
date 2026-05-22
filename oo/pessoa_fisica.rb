@@ -4,13 +4,16 @@ class PessoaFisica < Pessoa
   attr_accessor :cpf
 
   def initialize(nome, cpf)
-    super(nome)
+    super(nome, endereco)
     @cpf = cpf
   end
 
   def exibir_dados
     puts "=========DADOS PESSOA FÍSICA========="
-    puts "Nome: #{@nome}\nCPF: #{@cpf}"
+    puts "Nome: #{@nome}"
+    puts "CPF: #{@cpf}"
+    puts "Cidade: #{@endereco.cidade}"
+    puts "Bairro: #{@endereco.bairro}"
     puts "=================================="
   end
 end
