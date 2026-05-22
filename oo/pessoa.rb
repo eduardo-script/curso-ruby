@@ -2,7 +2,7 @@ class Pessoa
 
     attr_reader :nome
 
-    def initalize(nome)
+    def initialize(nome)
       @nome = nome
     end
 

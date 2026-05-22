@@ -10,10 +10,19 @@ class ContaCorrente < Conta
     end
 
     def verificar_saldo
-      puts "############################"
+      puts "=======#{"SALDO ATUAL".center(20)}========"
       puts "Saldo: R$ #{'%.2f' % @saldo}"
       puts "Limite: R$ #{'%.2f' % @limite}"
-      puts "##############################"
+      puts "=================================="
+    end
+
+    def exibir_dados_conta
+      puts "=========DADOS DA CONTA CORRENTE========="
+      puts "Número da Conta: #{@numero}"
+      puts "Titular: #{@titular.nome}"
+      puts "Saldo: R$ #{'%.2f' % @saldo}"
+      puts "Limite: R$ #{'%.2f' % @limite}"
+      puts "=================================="
     end
 
 end

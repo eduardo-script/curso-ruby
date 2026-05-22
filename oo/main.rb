@@ -1,27 +1,17 @@
-require_relative "./conta.rb"
 require_relative "./conta_corrente"
+require_relative "./pessoa_fisica"
+require_relative "./pessoa_juridica"
 
-maria = ContaCorrente.new 1, "Maria Cardorso"
-lucas = Conta.new 2, "Lucas Henrique"
-#fabio = Conta.new 3, "Fabio Felipe"
+maria = PessoaFisica.new("Maria Cardorso", "123.456.789-00")
+empresa = PessoaJuridica.new("Empresa Exemplo", "12.345.678/0001-00")
 
-lucas.verificar_saldo
+maria.exibir_dados
+empresa.exibir_dados
 
-maria.verificar_saldo
+conta_maria = ContaCorrente.new 1, maria
+conta_empresa = ContaCorrente.new 2, empresa
 
-
-#lucas.depositar(200)
-#maria.depositar(200)
-
-#lucas.sacar(50)
-
-#maria.transferir lucas, 50
-#lucas.transferir fabio, 150
-
-#puts "#{maria.numero} - #{maria.titular} - saldo: R$ #{maria.saldo}"
-#puts "#{lucas.numero} - #{lucas.titular} - saldo: R$ #{lucas.saldo}"
-#puts "#{fabio.numero} - #{fabio.titular} - saldo: R$ #{fabio.saldo}"
-
-
+conta_maria.exibir_dados_conta
+conta_empresa.exibir_dados_conta
 
 
